@@ -23,13 +23,12 @@ body {
   margin-top: 5px; }
 
 .header1 {
-  background-image: url("../Images/FEND-Coffee-latte-art-4.png");
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../Images/FEND-Coffee-latte-art-4.png");
   position: relative;
   background-size: cover;
   width: 375px;
   height: 500.25px;
-  top: 0px;
-  color: rgba(26, 26, 26, 0.3); }
+  top: 0px; }
 
 .header {
   /* Rectangle 17 */
@@ -38,8 +37,7 @@ body {
   height: 500.25px;
   left: 0px;
   top: 0px;
-  background-position: center;
-  background: rgba(26, 26, 26, 0.3); }
+  background-position: center; }
 
 .nav {
   height: 55px;
