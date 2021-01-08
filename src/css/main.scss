@@ -1,7 +1,189 @@
 @import "variables";
 @import "base";
 @import "components/hero";
+@mixin font-color ($col){
+  color: $col;
+}
+@mixin font ($color){
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  color: $color;
+}
+  
 
 :root {
   --div-color: red;
 }
+
+$color-basic: #ffffff;
+$color-basicII: 111111;
+$color-black: black;
+
+
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+.logobox {
+  position: relative;
+}
+
+.logoI {
+  height: 35px;
+  position: absolute;
+  margin-left: 24px;
+  margin-top: 10px;
+}
+
+.logoII {
+  height: 21.7px;
+  margin-left: 33.49px;
+  margin-top: 16.5px;
+  position: absolute;
+}
+
+.navbox {
+  position: absolute;
+  margin-top: 5px;
+}
+.header1 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("../Images/FEND-Coffee-latte-art-4.png");
+  position: relative;
+  background-size: cover;
+  width: 375px;
+  height: 500.25px;
+  top: 0px;
+}
+.header {
+  /* Rectangle 17 */
+
+  position: absolute;
+  width: 375px;
+  height: 500.25px;
+  left: 0px;
+  top: 0px;
+  background-position: center;
+}
+
+
+.navigation {
+  height: 55px;
+  width: 375px;
+  left: 0px;
+  top: 0px;
+  border-radius: 0px;
+  position: relative;
+  top: 10%;
+  left: 85%;
+  transform: translate(-0%, 30%);
+}
+
+.navigation_list {
+  @include font-color ($color-basic);
+margin-left: 5%;
+
+  li {
+    list-style: none;
+  }
+}
+.textbox {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.rusticabox {
+  /* Rustica */
+
+  width: 218px;
+  height: 75px;
+}
+
+.h1 {
+  /* H1 m */
+  margin: 0px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 75px;
+  /* identical to box height, or 117% */
+  text-align: center;
+  @include font-color ($color-basic);
+}
+
+.Biobox {
+  /* Bio und Fair seit 1991 */
+
+  width: 174px;
+  height: 21px;
+  left: 100px;
+  top: 268px;
+  transform: translate(13%, 0%);
+}
+.subtitel {
+  /* Subhead m */
+  position: relative;
+  margin: 0px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  /* identical to box height */
+  text-align: center;
+  @include font-color ($color-basic);
+
+}
+
+
+.button:link,
+.button:hover,
+.button:active{
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: $color-black;
+height: 33px;
+width: 163px;
+padding-top:15px;
+font-size: 14px;
+line-height: 18px;
+  transform: translate(-50%, +190%);
+  position: absolute;
+  border-radius: 5px;
+  @include font ($color-basic);
+}
+
+.Röstbox {
+  /* Rösterei & Café */
+
+  position: absolute;
+  width: 255px;
+  height: 34px;
+  left: 24px;
+  top: 560px;
+}
+
+.h2 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 34px;
+  @include font-color($color-black)
+  /* identical to box height, or 94% */
+  
+
+  }

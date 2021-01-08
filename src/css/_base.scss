@@ -1,5 +1,9 @@
+$color-basic: #ffffff;
+$color-basicII: 111111;
+$color-black: black;
+
 body {
-  background: blue;
+  background: $color-basic;
 
   @media (min-width: 768px) {
     background: linear-gradient(#e98a00, #f5aa2f);
@@ -8,7 +12,7 @@ body {
 
 main {
   div {
-    color: yellow;
+   
 
     @media (min-width: 768px) {
       color: var(--div-color);
