@@ -2,20 +2,19 @@ $color-basic: #ffffff;
 $color-basicII: 111111;
 $color-black: black;
 
+
+
 body {
   background: $color-basic;
 
-  @media (min-width: 768px) {
-    background: linear-gradient(#e98a00, #f5aa2f);
-  }
+
 }
 
 main {
   div {
    
 
-    @media (min-width: 768px) {
-      color: var(--div-color);
-    }
+  
+  
   }
 }

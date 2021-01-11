@@ -11,7 +11,33 @@
   font-weight: 400;
   color: $color;
 }
-  
+
+// Small devices (landscape phones, 576px and up)
+@mixin  sm{
+@media (min-width: 576px) { @content;}
+}
+
+// Medium devices (tablets, 768px and up)
+@mixin md{
+  @media (min-width: 768px) { @content;}
+}
+
+// Large devices (desktops, 992px and up)
+@mixin lg{
+  @media (min-width: 992px) { @content;}
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@mixin xl{
+  @media (min-width: 1200px) { @content;}
+}
+
+
+// Very large desktop devices (1920px and up)
+@mixin xxl{
+  @media (min-width: 1920px) { @content;}
+}
+
 
 :root {
   --div-color: red;
@@ -63,9 +89,18 @@ body {
     url("../Images/FEND-Coffee-latte-art-4.png");
   position: relative;
   background-size: cover;
-  width: 375px;
-  height: 500.25px;
+  width: auto;
+  height: 500px;
   top: 0px;
+
+  @include md{ height: 800px;}
+  @include xl{ height: 681px; background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.3)
+  ),
+  url("../Images/FEND-Coffee-latte-art-3.png");}
+
 }
 .header {
   /* Rectangle 17 */
@@ -80,15 +115,16 @@ body {
 
 
 .navigation {
+  visibility: hidden;
   height: 55px;
-  width: 375px;
+  width: 10px;
   left: 0px;
   top: 0px;
+  margin-right: 0px;
   border-radius: 0px;
   position: relative;
-  top: 10%;
-  left: 85%;
-  transform: translate(-0%, 30%);
+  
+;
 }
 
 .navigation_list {
@@ -126,6 +162,7 @@ margin-left: 5%;
   /* identical to box height, or 117% */
   text-align: center;
   @include font-color ($color-basic);
+  @include xl {font-size: 96px}
 }
 
 .Biobox {
@@ -135,7 +172,9 @@ margin-left: 5%;
   height: 21px;
   left: 100px;
   top: 268px;
-  transform: translate(13%, 0%);
+  @include xl {width: auto;}
+  
+  
 }
 .subtitel {
   /* Subhead m */
@@ -147,7 +186,6 @@ margin-left: 5%;
   font-size: 18px;
   line-height: 21px;
   /* identical to box height */
-  text-align: center;
   @include font-color ($color-basic);
 
 }
@@ -184,7 +222,7 @@ margin-left:24px;
 
   margin-left:24px;
   margin-right:20px;
-  margin-top: 35px;
+  margin-top: 20px;
   max-width: 507px;
  
 }
@@ -192,24 +230,30 @@ margin-left:24px;
 .RöstboxIII{
 
   margin:24px;
+  margin-right: 5px;
+  margin-top:21px;
 }
 
 .RöstboxIIII{
   margin-left:24px;
   margin-right:20px;
-  margin-top: 35px;
+  margin-top: 40px;
   max-width: 507px;
 
 }
-.h2 {
+
+.Head2{
   font-family: Roboto;
   font-style: normal;
   font-weight: 900;
   font-size: 36px;
   line-height: 34px;
+  margin-block-start: 0px;
+  margin:0px;
   @include font-color($color-black)
   /* identical to box height, or 94% */
-  }
+
+}
 
   
   .RöstbildI{
@@ -228,7 +272,8 @@ margin-left:24px;
 
     height: 182px;
     width:241 ;
-    padding-left: 110px;
+    padding-left: 86px;
+    margin-top: 16px;
 
   }
 
@@ -238,6 +283,7 @@ margin-left:24px;
     width:241 ;
 
   }
+
   .flexbox{
 
     display: flex;
