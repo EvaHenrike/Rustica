@@ -153,7 +153,6 @@ margin-left: 5%;
 .h1 {
   /* H1 m */
   margin: 0px;
-
   font-family: Roboto;
   font-style: normal;
   font-weight: 900;
@@ -168,7 +167,7 @@ margin-left: 5%;
 .Biobox {
   /* Bio und Fair seit 1991 */
 
-  width: 174px;
+
   height: 21px;
   left: 100px;
   top: 268px;
@@ -232,6 +231,8 @@ margin-left:24px;
   margin:24px;
   margin-right: 5px;
   margin-top:21px;
+  
+  
 }
 
 .RöstboxIIII{
@@ -239,6 +240,8 @@ margin-left:24px;
   margin-right:20px;
   margin-top: 40px;
   max-width: 507px;
+  
+  @include xl{width: 26%;}
 
 }
 
@@ -274,6 +277,7 @@ margin-left:24px;
     width:241 ;
     padding-left: 86px;
     margin-top: 16px;
+    @include xl{height: 391px;}
 
   }
 
@@ -281,6 +285,7 @@ margin-left:24px;
 
     height: 182px;
     width:241 ;
+    @include xl{height: 406px;}
 
   }
 
@@ -289,4 +294,86 @@ margin-left:24px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+  }
+  .flexboxI{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+  }
+
+.map
+{
+  position: absolute;
+  margin-top:35px;
+  width: 100%;
+    height: 231px;
+    @include xl{height: 484px;}
+}
+
+.Herkunft{
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("../Images/FEND-Coffee-bags-2.jpg");
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 332px;
+  margin-top: 75px;
+  text-align: center;
+
+  @include md{ height: 800px;}
+  @include xl{ height: 524px}
+}
+
+.HerkunftI
+{
+  position: absolute;
+  width: 100%;
+  
+}
+
+.HerkunftII
+{
+  position: absolute;
+  margin-top: 12px;
+  width: 70%;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  @include xl {width: 20%}
+}
+.Head3
+{
+  margin-top: 87px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 37.5px;
+  text-align: center;
+  @include font-color ($color-basic);
+  @include xl {font-size: 49.22px; line-height: 49.22px; margin-top: 145px}
+}
+
+.middle{
+  @include font ($color-basic);
+  font-size: 14px;
+margin-top:60px;
+}
+.mapbox{
+margin-top:87px;
+margin-left: 24px;
+
+}
+  .iframe{
+    width: 100%;
+    height: 231px;
+    border:none;
+    @include xl{height: 484px;}
   }
