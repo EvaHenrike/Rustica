@@ -1,0 +1,96 @@
+
+
+.navigation{
+
+    justify-content: flex-start;
+.navigation_checkbox{
+
+
+    }
+
+.navigation_button{
+background-image: url("../Images/Burger Menu.png") ;
+background-size: cover;
+background-position: center;
+position:fixed;
+height: 12.5px;
+width: 23.5px;
+
+top:21px;
+right:25px;
+z-index:2000;
+
+
+}
+.navigation_background{
+    height: 12.5px;
+    width: 23.5px;
+border-radius: 50%;
+
+position: fixed;
+top: 6.5rem;
+right:6.5rem;
+top:21px;
+right:25px;
+background-image: radial-gradient($color-black, $color-black);
+z-index: 1000;
+
+
+}
+
+.navigation_nav{
+height: 100vh;
+position: fixed;
+top:0;
+right:0;
+z-index: 1500; 
+opacity: 0;
+width: 0;
+
+
+
+}
+.navigation_list{
+
+    
+position:absolute;
+
+top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size:32px;
+  color: $color-basic;
+  list-style: none;
+
+}
+
+&__item{
+
+}
+
+&__item{
+
+}
+.navigation_link:hover
+.navigation_link:active
+.navigation_link:hover
+{
+display: inline-block;
+    margin:25px;
+
+}
+
+.navigation_checkbox:checked ~ .navigation_background {
+    transform: scale(100);
+}
+
+.navigation_checkbox:checked ~ .navigation_nav {
+    transform: scale(1);
+    opacity: 1;
+width: 100%;
+}
+}
