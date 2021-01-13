@@ -373,6 +373,9 @@ display: inline;
 
   .flexboxIV{
 display: block;
+flex-direction: row;
+flex-wrap:wrap-reverse;
+
     @include xl{display: flex;
       flex-direction: row;
       flex-wrap: wrap-reverse;}
@@ -394,18 +397,22 @@ padding-top:60px;
 .CostaI{
 width: 41%;
 margin: 40px 8px 40px 24px;
+@include xl {width: 299px;}
 }
 .CostaII{
   width: 41%;
   margin: 40px 25px 40px 8px;
+  @include xl {width: 299px;}
   }
   .CostaIII{
     width: 41%;
     margin: 40px 8px 40px 24px;
+    @include xl {width: 299px;}
     }
     .CostaIV{
       width: 41%;
       margin: 40px 25px 40px 8px;
+      @include xl {width: 299px;}
     }
 
     .Icon{
@@ -502,6 +509,74 @@ margin: 40px 8px 40px 24px;
   @include xl {font-size: 49.22px; line-height: 49.22px; margin-top: 145px}
 }
 
+.Inhalt{
+margin: 60px 0px 72px 0px;
+height:850px;
+background-color: $color-basic;
+display: inline;
+
+@include xl {display: flex; justify-content: flex-start; flex-direction:column; height: 1500px; margin:auto;
+ align-items: center;}
+
+h2{
+margin: 60px 65px 35px 65px;
+@include xl { margin:0px;}
+}
+
+.Image-CostaII{
+width: 214px;
+height: auto;
+margin-left: 74px;
+
+
+}
+
+.Costabox{
+  display: flex;
+  justify-content: center;
+
+}
+.Inhaltflex{
+
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+@include xl { display: flex;
+  justify-content: space-between;
+  flex-direction: column;}
+.IconboxI{
+margin: 40px 18px 40px 24px;
+text-align: center;
+width: 87px;
+
+.p{
+
+  height: 53px;
+}
+
+}
+.IconboxII{
+  margin: 40px 18px 40px 18px;
+  text-align: center;
+  width: 87px;
+  .p{
+  
+    height: 53px;
+  }
+}
+.IconboxIII{
+  margin: 40px 24px 40px 18px;
+  text-align: center;
+  width: 87px;
+  .p{
+  
+    height: 53px;
+  }
+}
+}
+
+
+}
 .middle{
   @include font ($color-basic);
   font-size: 14px;
