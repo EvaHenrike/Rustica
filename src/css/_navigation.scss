@@ -1,4 +1,22 @@
-
+// Small devices (landscape phones, 576px and up)
+@mixin  sm{
+    @media (min-width: 576px) { @content;}
+    }
+    
+    // Medium devices (tablets, 768px and up)
+    @mixin md{
+      @media (min-width: 768px) { @content;}
+    }
+    
+    // Large devices (desktops, 992px and up)
+    @mixin lg{
+      @media (min-width: 992px) { @content;}
+    }
+    
+    // Extra large devices (large desktops, 1200px and up)
+    @mixin xl{
+      @media (min-width: 1200px) { @content;}
+    }
 
 .navigation{
 
@@ -11,7 +29,7 @@ visibility: hidden;
 
 position: relative;
 margin-top:10px;
-
+@include sm { visibility: hidden;}
     &,
     &::before,
     &::after {
@@ -99,22 +117,22 @@ top: 50%;
   font-size:32px;
   color: $color-basic;
   list-style: none;
+ 
 
 }
 
-&__item{
-
+.navigation_link{
+    cursor: pointer;
+    margin:25px;
 }
 
-&__item{
-
-}
 .navigation_link:hover
 .navigation_link:active
 .navigation_link:hover
 {
 display: inline-block;
-    margin:25px;
+    
+   
 
 }
 
@@ -131,7 +149,7 @@ background-color: transparent;
     }
 
     .navigation_checkbox:checked + .navigation_button .navigation_icon::after {
-        top:0px;
+       top:0px;
         transform: rotate(-45deg);
         
         }

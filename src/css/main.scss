@@ -103,26 +103,42 @@ body {
 }
 
 
-.navigation_navI{
+.navigation_divI{
 
   visibility: hidden;
-  @mixin sm{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-
-   }
-
-}
-
-.navigation_listI{
-  visibility: hidden;
-  @mixin sm{
+  @include sm{
     visibility: visible;
+    display: flex;
+ 
+  margin-left: auto;
+  padding-right: 100px;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 30%;
 
    }
 
 }
+
+.navigation_linkI{
+
+  visibility: hidden;
+  
+  @include sm{
+    visibility: visible;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21.09px;
+    color: $color-basic;
+    text-decoration: none;
+   }
+   
+}
+
+
 .logobox {
   position: relative;
 }
@@ -233,7 +249,7 @@ body {
 
 
 .button:link,
-.button:hover,
+
 .button:active{
   text-decoration: none;
   background-color: $color-black;
@@ -246,6 +262,12 @@ line-height: 18px;
   position: absolute;
   border-radius: 5px;
   @include font ($color-basic);
+  cursor: pointer;
+}
+
+.button:hover{
+color: grey;
+
 }
 
 .Röstbox {
@@ -480,6 +502,7 @@ margin: 40px 8px 40px 24px;
       border-style: $color-basic;
     @include center;
       @include font ($color-basic);
+      cursor: pointer;
     
     }
 
