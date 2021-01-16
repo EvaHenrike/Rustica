@@ -87,6 +87,7 @@ $color-basic: #ffffff;
 $color-basicII: 111111;
 $color-black: black;
 $color-grey:#737373;
+$color-cream:#f6efe2;
 
 
 
@@ -109,7 +110,6 @@ body {
   @include sm{
     visibility: visible;
     display: flex;
- 
   margin-left: auto;
   padding-right: 100px;
   align-items: flex-start;
@@ -126,7 +126,6 @@ body {
   
   @include sm{
     visibility: visible;
-    
     font-family: Roboto;
     font-style: normal;
     font-weight: 400;
@@ -138,23 +137,43 @@ body {
    
 }
 
+.navigation_linkI:hover{
+  color: $color-cream;
+
+}
+.navigation_linkI:active{
+  text-decoration: underline;
+
+}
+
 
 .logobox {
   position: relative;
 }
 
 .logoI {
-  height: 35px;
+  height: 21px;
   position: fixed;
   margin-left: 24px;
   margin-top: 10px;
+  @include md{
+visibility: hidden;
+
+  }
 }
 
 .logoII {
-  height: 21.7px;
-  margin-left: 33.49px;
-  margin-top: 16.5px;
-  position: fixed;
+
+  visibility: hidden;
+  @include md {
+    visibility: visible;
+    height: 35px;
+    margin-left: 112px;
+    margin-top: 16.5px;
+    position: fixed;
+  }
+
+
 }
 
 
@@ -248,9 +267,7 @@ body {
 }
 
 
-.button:link,
-
-.button:active{
+.button:link{
   text-decoration: none;
   background-color: $color-black;
 height: 33px;
@@ -266,7 +283,10 @@ line-height: 18px;
 }
 
 .button:hover{
-color: grey;
+color: $color-cream;
+}
+.button:active{
+text-decoration: underline;
 
 }
 
@@ -312,11 +332,10 @@ margin-left:24px;
 }
 
 .RöstboxIIII{
-  margin-left:24px;
-  margin-right:20px;
-  margin-top: 40px;
+  
+  margin: 40px 20px 0px 24px;
   max-width: 507px;
-  @include xl{margin-left:104px;margin-top: 181px;}
+  @include xl{margin-top: 181px;margin-left: 0px;width: 76%;}
 
   p{
     @include xl{ margin-top:24px;}
@@ -331,7 +350,8 @@ margin-left:24px;
   line-height: 34px;
   margin-block-start: 0px;
   margin:0px;
-  @include font-color($color-black)
+  @include font-color($color-black);
+ 
   /* identical to box height, or 94% */
 
 }
@@ -343,7 +363,16 @@ margin-left:24px;
   line-height: 34px;
  margin: 0px 45px 40px 40px;
  position: relative;
-  @include font-color($color-basic)
+
+  @include font-color($color-basic);
+  @include md {
+
+    margin-left:122px;
+    margin-top:125px;
+    width: 25%;
+  }
+
+  
 
 }
 
@@ -362,7 +391,7 @@ margin-left:24px;
 
 margin: 40px 0px 0px 24px;
 display: inline;
-@include xl{margin-left:104px; margin-top:124px;display:flex;}
+@include xl{margin-left:104px; margin:124px 122px 0px 0px; display:flex;}
 
 
   }
@@ -371,7 +400,7 @@ display: inline;
     width:241 ;
     padding-left: 86px;
     margin-top: 16px;
-    @include xl{height: 391px;}
+    @include xl{height: 391px;margin-top:0px;}
 
   }
 
@@ -437,18 +466,26 @@ flex-wrap:wrap-reverse;
 
     @include xl{display: flex;
       flex-direction: row-reverse;
-     
+      margin-right:auto;
+      justify-content: center;
      }
-    
+  }
+
+  .flexbox00{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 
   }
 
 .Sorten{
 background-color: $color-black;
-height:910px;
 padding-bottom: 75px;
+display: block;
 position: relative;
 padding-top:60px;
+
 .Image-Costa{
   width: 100%;
  
@@ -483,13 +520,15 @@ margin: 40px 8px 40px 24px;
 .buttonII{
 
  
-  @include center()
+  @include center();
+  @include md{
+margin-top: 97px;
+    margin-bottom: 140px;
+  }
 
 }
 
-    .buttonI:link,
-    .buttonI:hover,
-    .buttonI:active{
+    .buttonI:link{
       text-decoration: none;
       background-color: $color-black;
     height: 33px;
@@ -507,6 +546,14 @@ margin: 40px 8px 40px 24px;
     }
 
 }
+
+.buttonI:hover{
+  color: $color-cream;
+  }
+  .buttonI:active{
+  text-decoration: underline;
+  
+  }
 
 .map
 {
@@ -577,6 +624,16 @@ display: inline;
 @include xl {display: flex; justify-content: flex-start; flex-direction:column; height: 1500px; margin:auto;
  align-items: center;}
 
+.InhaltIII{
+
+  @include md{
+    margin-top:125px;
+    margin-bottom: 88px;
+    
+    
+      }
+}
+
 h2{
 margin: 60px 65px 35px 65px;
 @include xl { margin:0px;}
@@ -586,12 +643,15 @@ margin: 60px 65px 35px 65px;
 width: 214px;
 height: auto;
 margin-left: 74px;
+@include md {
+  width:100%;
+}
+
 
 
 }
 
 .Costabox{
-  display: flex;
   justify-content: center;
 
 }
@@ -640,9 +700,7 @@ width: 87px;
     
 }
 
-.buttonIII:link,
-.buttonIII:hover,
-.buttonIII:active{
+.buttonIII:link{
   text-decoration: none;
   background-color: $color-black;
 height: 33px;
@@ -654,6 +712,15 @@ line-height: 18px;
   border-radius: 5px;
   @include font ($color-basic);
 }
+
+.buttonIII:hover{
+  color: $color-cream;
+  }
+  .buttonIII:active{
+  text-decoration: underline;
+  
+  }
+
 }
 .middle{
   @include font ($color-basic);
@@ -680,6 +747,10 @@ margin-left: 24px;
   
   display: block;
 
+@include md {
+
+  display: flex;
+}  
   .logo{
 
     margin: 0px 0px 0px 26px;
@@ -695,16 +766,23 @@ margin-left: 24px;
   }
 .flexo{
 
+  
+
  
-  @include xl{  display: flex;
+  @include md{  display: flex;
     flex-direction: row;
-    flex-wrap: wrap;}
+    flex-wrap: wrap;
+    width: 80%;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 219px;
+  }
 
     .flexoII{
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-@include xl{
+@include md{
   flex-direction: row-reverse;
 }
     }
@@ -716,12 +794,26 @@ margin-left: 24px;
   display: block;
   padding-top: 61px;
   
+  @include md {
+padding-top: 138.92px;
+
+  }
     }
 
     .LOGO{
 
       margin-bottom: 34px;
       margin-top:0px;
+    }
+
+    .LogoboxIIV{
+
+      @include md{
+        margin: 0px 170px 148px 199px;
+        padding-bottom: 148px;;
+
+
+      }
     }
 .middle1box{
  
