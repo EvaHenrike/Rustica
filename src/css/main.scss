@@ -102,6 +102,27 @@ body {
   margin: 0;
 }
 
+
+.navigation_navI{
+
+  visibility: hidden;
+  @mixin sm{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+   }
+
+}
+
+.navigation_listI{
+  visibility: hidden;
+  @mixin sm{
+    visibility: visible;
+
+   }
+
+}
 .logobox {
   position: relative;
 }
