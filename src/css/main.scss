@@ -115,10 +115,15 @@ body {
   align-items: flex-start;
   justify-content: space-between;
   width: 30%;
+  margin-left: 60%;
+  position: fixed;
+  
 
    }
 
 }
+
+
 
 .navigation_linkI{
 
@@ -133,6 +138,7 @@ body {
     line-height: 21.09px;
     color: $color-basic;
     text-decoration: none;
+    
    }
    
 }
@@ -191,7 +197,7 @@ visibility: hidden;
   top: 0px;
 
   @include md{ height: 800px;}
-  @include xl{ height: 681px; background-image: linear-gradient(
+  @include xl{ background-image: linear-gradient(
     0deg,
     rgba(0, 0, 0, 0.3),
     rgba(0, 0, 0, 0.3)
@@ -299,6 +305,7 @@ margin-left:24px;
   left: 24px;
   top: 560px;
   display: block;
+  @include md { width: auto;}
   @include xl{margin-left:104px;margin-top: 0px;}
 }
 
@@ -351,6 +358,7 @@ margin-left:24px;
   margin-block-start: 0px;
   margin:0px;
   @include font-color($color-black);
+  @include md{ font-size: 48px;}
  
   /* identical to box height, or 94% */
 
@@ -478,6 +486,13 @@ flex-wrap:wrap-reverse;
     justify-content: center;
 
   }
+  .flexbox01{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 55%;
+  }
 
 .Sorten{
 background-color: $color-black;
@@ -489,6 +504,7 @@ padding-top:60px;
 .Image-Costa{
   width: 100%;
  
+ 
 }
 
 .CostaI{
@@ -499,13 +515,20 @@ margin: 40px 8px 40px 24px;
 .CostaII{
   width: 41%;
   margin: 40px 25px 40px 8px;
+  @include md {
+    margin: 40px 8px 40px 8px;
+  }
   @include xl {width: 299px;}
   }
   .CostaIII{
     width: 41%;
     margin: 40px 8px 40px 24px;
+    @include md {
+      margin: 40px 8px 40px 8px;
+    }
     @include xl {width: 299px;}
     }
+    
     .CostaIV{
       width: 41%;
       margin: 40px 25px 40px 8px;
@@ -621,7 +644,10 @@ height:850px;
 background-color: $color-basic;
 display: inline;
 
-@include xl {display: flex; justify-content: flex-start; flex-direction:column; height: 1500px; margin:auto;
+@include md {
+  align-items: center;display: flex; justify-content: flex-start; flex-direction:column;
+}
+@include xl {display: flex; justify-content: flex-start; flex-direction:column; padding-bottom: 125px ;
  align-items: center;}
 
 .InhaltIII{
@@ -644,7 +670,11 @@ width: 214px;
 height: auto;
 margin-left: 74px;
 @include md {
-  width:100%;
+  
+ 
+    width: auto;height: 110%;
+    margin-left:0px;
+  
 }
 
 
@@ -653,6 +683,7 @@ margin-left: 74px;
 
 .Costabox{
   justify-content: center;
+  margin-right:auto;
 
 }
 .Inhaltflex{
@@ -711,12 +742,44 @@ line-height: 18px;
   position: absolute;
   border-radius: 5px;
   @include font ($color-basic);
+  @include xl {
+    visibility: hidden;
+  }
 }
 
-.buttonIII:hover{
+.buttonIV:hover{
   color: $color-cream;
   }
-  .buttonIII:active{
+  .buttonIV:active{
+  text-decoration: underline;
+  
+  }
+
+  .buttonIV{
+  
+    @include center()
+    
+}
+
+.buttonIV:link{
+  visibility: hidden;
+  text-decoration: none;
+  background-color: $color-black;
+height: 33px;
+width: 163px;
+padding-top:15px;
+font-size: 14px;
+line-height: 18px;
+  position: absolute;
+  border-radius: 5px;
+  @include font ($color-basic);
+  @include xl{ visibility: visible;}
+}
+
+.buttonIV:hover{
+  color: $color-cream;
+  }
+  .buttonIV:active{
   text-decoration: underline;
   
   }
