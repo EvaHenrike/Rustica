@@ -4,25 +4,19 @@
 @import "navigation";
 
 @mixin font-color ($col){
-  color: $col;
-}
+  color: $col;}
 @mixin font ($color){
-
   font-family: Roboto;
   font-style: normal;
   font-weight: 400;
-  color: $color;
-}
+  color: $color;}
 
 @mixin fontI ($color){
-
-
   font-family: Roboto;
   font-style: normal;
   font-weight: 900;
   font-size:32px;
-  color: $color;
-}
+  color: $color;}
 
 @mixin fontIII ($color){
   font-family: Roboto;
@@ -30,9 +24,7 @@
   font-weight: 900;
   font-size: 24px;
   line-height: 28.13px;
-  color: $color;
-  
-}
+  color: $color;}
 
 @mixin fontIV ($color){
   font-family: Roboto;
@@ -40,17 +32,13 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 21.09px;
-  color: $color;
-  
-}
+  color: $color;}
 
 @mixin center{
   justify-content: flex-start;
   align-items: center;
   display: flex;
-  flex-direction: column;
-  
-}
+  flex-direction: column;}
 
 // Small devices (landscape phones, 576px and up)
 @mixin  sm{
@@ -78,11 +66,6 @@
   @media (min-width: 1920px) { @content;}
 }
 
-
-:root {
-  --div-color: red;
-}
-
 $color-basic: #ffffff;
 $color-basicII: 111111;
 $color-black: black;
@@ -94,41 +77,29 @@ $color-cream:#f6efe2;
 p{
   @include font ($color-black);
   font-size: 14px;
-  @include xl{ font-size: 18px;}
-
-}
+  @include xl{ font-size: 18px;}}
 
 body {
   font-family: "Roboto", sans-serif;
-  margin: 0;
-}
-
+  margin: 0;}
 
 .navigation_divI{
-
   visibility: hidden;
   @include sm{
-    visibility: visible;
-    display: flex;
+  visibility: visible;
+  display: flex;
   margin-left: auto;
   padding-right: 100px;
   align-items: flex-start;
   justify-content: space-between;
   width: 30%;
   margin-left: 60%;
-  position: fixed;
-  
-
-   }
-
-}
+  position: fixed;}}
 
 
 
 .navigation_linkI{
-
   visibility: hidden;
-  
   @include sm{
     visibility: visible;
     font-family: Roboto;
@@ -137,25 +108,16 @@ body {
     font-size: 18px;
     line-height: 21.09px;
     color: $color-basic;
-    text-decoration: none;
-    
-   }
-   
-}
+    text-decoration: none;}}
 
 .navigation_linkI:hover{
-  color: $color-cream;
+  color: $color-cream;}
 
-}
 .navigation_linkI:active{
-  text-decoration: underline;
-
-}
-
+  text-decoration: underline;}
 
 .logobox {
-  position: relative;
-}
+  position: relative;}
 
 .logoI {
   height: 21px;
@@ -163,24 +125,19 @@ body {
   margin-left: 24px;
   margin-top: 10px;
   @include md{
-visibility: hidden;
-
-  }
-}
+visibility: hidden;}}
 
 .logoII {
-
   visibility: hidden;
+  display: none;
   @include md {
     visibility: visible;
+    display: inline;
     height: 35px;
     margin-left: 112px;
     margin-top: 16.5px;
     position: fixed;
-  }
-
-
-}
+  }}
 
 
 .header1 {
@@ -188,33 +145,49 @@ visibility: hidden;
       0deg,
       rgba(0, 0, 0, 0.3),
       rgba(0, 0, 0, 0.3)
-    ),
-    url("../Images/FEND-Coffee-latte-art-4.png");
+      ),
+      url("../Images/FEND-Coffee-latte-art-4.png");
   position: relative;
   background-size: cover;
   width: auto;
   height: 500px;
   top: 0px;
-
-  @include md{ height: 800px;}
+  @include md{ height: 681px;}
   @include xl{ background-image: linear-gradient(
     0deg,
     rgba(0, 0, 0, 0.3),
     rgba(0, 0, 0, 0.3)
+    ),
+    url("../Images/FEND-Coffee-latte-art-3.png");}}
+
+.header1café{
+  background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.3)
+    ),
+    url("../Images/FEND-Coffee-shop-3.jpg");
+position: relative;
+background-size: cover;
+width: auto;
+height: 500px;
+top: 0px;
+@include md{ height: 681px;}
+@include xl{ background-image: linear-gradient(
+  0deg,
+  rgba(0, 0, 0, 0.3),
+  rgba(0, 0, 0, 0.3)
   ),
-  url("../Images/FEND-Coffee-latte-art-3.png");}
+  url("../Images/FEND-Coffee-shop-2.jpg");}}
 
-}
+
 .header {
-  /* Rectangle 17 */
-
   position: absolute;
   width: 375px;
   height: 500.25px;
   left: 0px;
   top: 0px;
-  background-position: center;
-}
+  background-position: center;}
 
 
 
@@ -223,43 +196,30 @@ visibility: hidden;
   left: 50%;
   position: absolute;
   transform: translate(-50%, -50%);
-  text-align: center;
-}
+  text-align: center;}
 
 .rusticabox {
-  /* Rustica */
-
   width: 218px;
-  height: 75px;
-}
+  height: 75px;}
 
 .h1 {
-  /* H1 m */
   margin: 0px;
   font-family: Roboto;
   font-style: normal;
   font-weight: 900;
   font-size: 64px;
   line-height: 75px;
-  /* identical to box height, or 117% */
   text-align: center;
   @include font-color ($color-basic);
-  @include xl {font-size: 96px}
-}
+  @include xl {font-size: 96px}}
 
 .Biobox {
-  /* Bio und Fair seit 1991 */
-
-
   height: 21px;
   left: 100px;
   top: 268px;
-  @include xl {width: auto;}
-  
-  
-}
+  @include xl {width: auto;}}
+
 .subtitel {
-  /* Subhead m */
   position: relative;
   margin: 0px;
   font-family: Roboto;
@@ -267,37 +227,30 @@ visibility: hidden;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
-  /* identical to box height */
-  @include font-color ($color-basic);
-
-}
+  @include font-color ($color-basic);}
 
 
 .button:link{
   text-decoration: none;
   background-color: $color-black;
-height: 33px;
-width: 163px;
-padding-top:15px;
-font-size: 14px;
-line-height: 18px;
+  height: 33px;
+  width: 163px;
+  padding-top:15px;
+  font-size: 14px;
+  line-height: 18px;
   transform: translate(-50%, +190%);
   position: absolute;
   border-radius: 5px;
   @include font ($color-basic);
-  cursor: pointer;
-}
+  cursor: pointer;}
 
 .button:hover{
-color: $color-cream;
-}
-.button:active{
-text-decoration: underline;
+color: $color-cream;}
 
-}
+.button:active{
+text-decoration: underline;}
 
 .Röstbox {
-  /* Rösterei & Café */
 margin-top: 60px;
 margin-left:24px;
   width: 255px;
@@ -306,48 +259,35 @@ margin-left:24px;
   top: 560px;
   display: block;
   @include md { width: auto;}
-  @include xl{margin-left:104px;margin-top: 0px;}
-}
+  @include xl{margin-left:104px;margin-top: 0px;}}
 
 .RöstboxI{
-
   margin-left:24px;
   margin-right:20px;
   margin-top: 20px;
   max-width: 507px;
   display: block;
-  @include xl{width: 507px; margin-left:104px;margin-top:35px;}
-
- 
-}
+  @include xl{width: 507px; margin-left:104px;margin-top:35px;}}
 
 .RöstboxIII{
-
   margin:24px;
   margin-right: 5px;
   margin-top:21px;
-
-  @include xl{margin-left: 0px;}
-
-}
+  @include xl{margin-left: 0px;}}
+  
 .RöstboxIV{
   margin:24px;
   margin-right: 5px;
   margin-top:21px;
-  @include xl{ margin-left: 120px;}
-
-}
+  @include xl{ margin-left: 120px;}}
 
 .RöstboxIIII{
-  
   margin: 40px 20px 0px 24px;
   max-width: 507px;
   @include xl{margin-top: 181px;margin-left: 0px;width: 76%;}
-
   p{
     @include xl{ margin-top:24px;}
-  }
-}
+  }}
 
 .Head2{
   font-family: Roboto;
@@ -358,11 +298,8 @@ margin-left:24px;
   margin-block-start: 0px;
   margin:0px;
   @include font-color($color-black);
-  @include md{ font-size: 48px;}
- 
-  /* identical to box height, or 94% */
+  @include md{ font-size: 48px;}}
 
-}
 .Head2white{
   font-family: Roboto;
   font-style: normal;
@@ -371,18 +308,11 @@ margin-left:24px;
   line-height: 34px;
  margin: 0px 45px 40px 40px;
  position: relative;
-
   @include font-color($color-basic);
   @include md {
-
     margin-left:122px;
     margin-top:125px;
-    width: 25%;
-  }
-
-  
-
-}
+    width: 25%;}}
 
   
   .RöstbildI{
@@ -391,81 +321,57 @@ margin-left:24px;
     display: flex;
     margin-top: 0px;
     margin-right: 0px;
-    @include xl{margin-right:101px;margin-top: 124px;}
-  }
+    @include xl{margin-right:101px;margin-top: 124px;}}
 
   .RöstbildII{
-
-
 margin: 40px 0px 0px 24px;
 display: inline;
-@include xl{margin-left:104px; margin:124px 122px 0px 0px; display:flex;}
+@include xl{margin-left:104px; margin:124px 122px 0px 0px; display:flex;}}
 
-
-  }
   .Röstbild1{
     height: 182px;
     width:241 ;
     padding-left: 86px;
     margin-top: 16px;
-    @include xl{height: 391px;margin-top:0px;}
-
-  }
-
- 
-  
-
- 
+    @include xl{height: 391px;margin-top:0px;}}
 
   .fontshopI{
-    @include font ($color-basic)
-  }
+    @include font ($color-basic)}
+
   .fontshopII{
-    
     font-size:14px;
-    @include font ($color-grey)
-  }
+    @include font ($color-grey)}
 
   .Röstbild2{
-
     height: 182px;
     width:241 ;
- margin-bottom: 60px;
-    @include xl{height: 406px;}
+    margin-bottom: 60px;
+    @include xl{height: 406px;}}
 
-  }
 .fix{
   display: block;
-  @include xl{margin-top: 124px;}
-}
+  @include xl{margin-top: 124px;}}
 
 .fx0{
-display: block;
+display: block;}
 
-}
 .flexitem{
-display: flex;
+display: flex;}
 
-}
 .fixI{
 display: inline;
-  @include xl{display:flex;}
+  @include xl{display:flex;}}
 
-}
   .flexbox{
-
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-  }
+    flex-wrap: wrap;}
  
   .flexboxI{
-
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    @include xl{margin-left:104px;}
-  }
+    @include xl{margin-left:104px;} }
 
   .flexboxIV{
 display: block;
@@ -475,24 +381,28 @@ flex-wrap:wrap-reverse;
     @include xl{display: flex;
       flex-direction: row-reverse;
       margin-right:auto;
-      justify-content: center;
-     }
-  }
+      justify-content: center;  } }
 
   .flexbox00{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center;}
 
-  }
   .flexbox01{
-
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 55%;
-  }
+    width: 55%;}
+
+    .flexbox02{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+@include md{
+  flex-direction: column;
+}
+    }
 
 .Sorten{
 background-color: $color-black;
@@ -502,90 +412,68 @@ position: relative;
 padding-top:60px;
 
 .Image-Costa{
-  width: 100%;
- 
- 
-}
+  width: 100%;}
 
 .CostaI{
 width: 41%;
 margin: 40px 8px 40px 24px;
-@include xl {width: 299px;}
-}
+@include xl {width: 299px;}}
+
 .CostaII{
   width: 41%;
   margin: 40px 25px 40px 8px;
   @include md {
-    margin: 40px 8px 40px 8px;
-  }
-  @include xl {width: 299px;}
-  }
+    margin: 40px 8px 40px 8px;}
+  @include xl {width: 299px;}}
   .CostaIII{
     width: 41%;
     margin: 40px 8px 40px 24px;
     @include md {
-      margin: 40px 8px 40px 8px;
-    }
-    @include xl {width: 299px;}
-    }
+      margin: 40px 8px 40px 8px;}
+    @include xl {width: 299px;}}
     
     .CostaIV{
       width: 41%;
       margin: 40px 25px 40px 8px;
-      @include xl {width: 299px;}
-    }
+      @include xl {width: 299px;} }
 
     .Icon{
       display: flex;
       margin: 0px 5px;
-      margin-left:auto;
-    }
-.buttonII{
+      margin-left:auto; }
 
- 
+.buttonII{
   @include center();
   @include md{
-margin-top: 97px;
-    margin-bottom: 140px;
-  }
-
-}
+  margin-top: 97px;
+  margin-bottom: 140px; }}
 
     .buttonI:link{
       text-decoration: none;
       background-color: $color-black;
-    height: 33px;
-    width: 163px;
-    padding-top:15px;
-    font-size: 14px;
-    line-height: 18px;
+      height: 33px;
+      width: 163px;
+      padding-top:15px;
+      font-size: 14px;
+      line-height: 18px;
       border-radius: 5px;
       border: 2px solid;
       border-style: $color-basic;
-    @include center;
+      @include center;
       @include font ($color-basic);
-      cursor: pointer;
-    
-    }
-
-}
+      cursor: pointer; }}
 
 .buttonI:hover{
-  color: $color-cream;
-  }
+  color: $color-cream; }
   .buttonI:active{
-  text-decoration: underline;
-  
-  }
+  text-decoration: underline;}
 
-.map
-{
- display: block;
+.map{
+  display: block;
   margin-top:35px;
   width: 100%;
-    height: 231px;
-    @include xl{height: 484px;}
-}
+  height: 231px;
+  @include xl{height: 484px;}}
 
 .Herkunft{
   background-image: linear-gradient(
@@ -599,23 +487,16 @@ margin-top: 97px;
   background-position: center;
   width: 100%;
   height: 332px;
- 
   text-align: center;
   display: block;
-
   @include md{ height: 800px;}
-  @include xl{ height: 524px}
-}
+  @include xl{ height: 524px}}
 
-.HerkunftI
-{
+.HerkunftI{
   position: absolute;
-  width: 100%;
-  
-}
+  width: 100%;}
 
-.HerkunftII
-{
+.HerkunftII{
   position: absolute;
   margin-top: 12px;
   width: 70%;
@@ -625,6 +506,7 @@ margin-top: 97px;
   transform: translate(-50%, -50%);
   @include xl {width: 20%}
 }
+
 .Head3
 {
   margin-top: 87px;
@@ -651,12 +533,9 @@ display: inline;
  align-items: center;}
 
 .InhaltIII{
-
   @include md{
     margin-top:125px;
     margin-bottom: 88px;
-    
-    
       }
 }
 
@@ -670,8 +549,6 @@ width: 214px;
 height: auto;
 margin-left: 74px;
 @include md {
-  
- 
     width: auto;height: 110%;
     margin-left:0px;
   
@@ -700,7 +577,6 @@ text-align: center;
 width: 87px;
 
 .p{
-
   height: 53px;
 }
 
@@ -710,7 +586,6 @@ width: 87px;
   text-align: center;
   width: 87px;
   .p{
-  
     height: 53px;
   }
 }
@@ -719,16 +594,13 @@ width: 87px;
   text-align: center;
   width: 87px;
   .p{
-  
     height: 53px;
   }
 }
 }
 
 .buttonIII{
-  
-    @include center()
-    
+    @include center()  
 }
 
 .buttonIII:link{
@@ -752,13 +624,10 @@ line-height: 18px;
   }
   .buttonIV:active{
   text-decoration: underline;
-  
   }
 
   .buttonIV{
-  
-    @include center()
-    
+    @include center()  
 }
 
 .buttonIV:link{
@@ -781,10 +650,9 @@ line-height: 18px;
   }
   .buttonIV:active{
   text-decoration: underline;
-  
   }
-
 }
+
 .middle{
   @include font ($color-basic);
   font-size: 14px;
@@ -818,14 +686,16 @@ margin-left: 24px;
 
     margin: 0px 0px 0px 26px;
    
-    @include fontIII ($color-basic) 
+    @include fontIII ($color-basic); 
+    @include md { font-size: 42px;}
     
   }
 
   .logo1{
     margin-left: 26px;
     margin-top: 0px;
-    @include fontIV ($color-basic) 
+    @include fontIV ($color-basic); 
+    @include md { margin-top: 14px;}
   }
 .flexo{
 
@@ -847,6 +717,8 @@ margin-left: 24px;
       flex-wrap: wrap;
 @include md{
   flex-direction: row-reverse;
+  margin-right:242px;
+  width: 40%;
 }
     }
     
@@ -862,11 +734,27 @@ padding-top: 138.92px;
 
   }
     }
+    .LogoIV{
+      @include md{ display: none;
+      }
+    }
 
+    .LogoIII{
+      display: none;
+      @include md{ display: flex;
+    }
+
+   
+
+    
     .LOGO{
 
       margin-bottom: 34px;
       margin-top:0px;
+  
+
+
+      }
     }
 
     .LogoboxIIV{
@@ -882,6 +770,8 @@ padding-top: 138.92px;
  
   margin: 0px 17px 34px 26px;
   width: 156px;
+  @include md{ width: auto;
+  margin-bottom: 27px;}
 }
 
 .middle2box{
@@ -897,12 +787,13 @@ padding-top: 138.92px;
  
   margin: 0px 17px 0px 26px;
   padding-bottom: 78px;
+  @include md{ 
+    margin-right: auto;}
 }
   
 }
 .middle1{
   @include font ($color-basic)
-
 }
     .middle2{
       @include font ($color-basic)
@@ -914,3 +805,25 @@ padding-top: 138.92px;
     .middle4{
       @include font ($color-basic)
     }
+
+
+    .centercafébox{
+     margin:60px 24px 48px 24px;
+     @include md {
+      
+      justify-content: center;
+      display: flex;
+      width: 30%;;
+
+      
+     }
+
+
+.hcafé{font-size: 32px;
+@include md {
+display: flex;
+margin: auto;
+
+}
+
+}}
