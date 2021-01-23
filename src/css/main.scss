@@ -180,6 +180,25 @@ top: 0px;
   ),
   url("../Images/FEND-Coffee-shop-2.jpg");}}
 
+  .header1herkunft{
+    background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+      ),
+      url("../Images/FEND-Coffee-beans-hand-2-2.jpg");
+  position: relative;
+  background-size: cover;
+  width: auto;
+  height: 375px;
+  top: 0px;
+  @include md{ height: 681px;}
+  @include xl{ background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.3)
+    ),
+    url("../Images/FEND-Coffee-beans-hand-2.jpg");}}
 
 .header {
   position: absolute;
@@ -190,6 +209,24 @@ top: 0px;
   background-position: center;}
 
 
+ .videobox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .videoboxI{display: block;
+    width: 80%;
+
+
+  }
+
+  .video{
+
+    width: 80%;
+  }
+
+  
+ } 
 
 .textbox {
   top: 50%;
