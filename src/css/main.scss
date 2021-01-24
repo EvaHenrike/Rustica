@@ -77,7 +77,8 @@ $color-cream:#f6efe2;
 p{
   @include font ($color-black);
   font-size: 14px;
-  @include xl{ font-size: 18px;}}
+  line-height: 18px;
+  @include md{ font-size: 18px;line-height: 24px;}}
 
 body {
   font-family: "Roboto", sans-serif;
@@ -215,14 +216,14 @@ top: 0px;
   align-items: center;
 
   .videoboxI{display: block;
-    width: 80%;
+    width: 86%;
 
 
   }
 
   .video{
 
-    width: 80%;
+    width: 100%;
   }
 
   
@@ -335,7 +336,7 @@ margin-left:24px;
   margin-block-start: 0px;
   margin:0px;
   @include font-color($color-black);
-  @include md{ font-size: 48px;}}
+  @include md{ font-size: 48px; line-height: 49.22px;}}
 
 .Head2white{
   font-family: Roboto;
@@ -945,3 +946,93 @@ display:none;
       margin-right: 16px;
     
     }}
+
+    .Anbauherkunft{
+      margin: 60px 24px 26px 24px;
+      @include md {
+
+        margin: 0px 0px 35px 0px;
+
+      }}
+      .AnbauherkunftI{
+        margin: 60px 24px 26px 24px;
+        @include md {
+  
+          margin: 0px 0px 35px 0px;
+          width:55%;
+        }
+
+    }
+    .RöstboxIherkunft{
+      margin: 20px 20px 60px 24px;
+      max-width: 507px;
+      display: block;
+      @include xl{width: 507px; margin-top:35px;margin-left:0px; width:65%;}}
+    
+      .RöstboxIIherkunft{
+        margin-left:24px;
+        margin-right:20px;
+        margin-top: 20px;
+        max-width: 507px;
+        display: block;
+        @include xl{width: 60%; margin-top:35px;margin-left:0px;}}
+
+
+      
+      .flexbox00herkunft{
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        @include md {
+          flex-direction: row-reverse;
+        
+
+        }
+      }
+      .RöstbildIherkunft{
+        justify-content: flex;
+        align-items: left;
+        display: flex;
+        margin: 6px 110px 60px 24px;
+        @include md{margin-right:101px;margin-top: 125px;}}
+
+        .RöstbildIIherkunft{
+          justify-content: flex;
+          align-items: left;
+          display: flex;
+          margin: 6px 110px 60px 24px;
+          @include md{margin-right:122px;margin-top: 251px;}}
+  
+
+        .Röstbild1herkunft{
+          padding-left: 86px;
+          margin-top: 16px;
+          @include xl {display:none}}
+
+          .Röstbild1-1hekrunft{
+           display: none;
+            @include xl { 
+              display: block;
+              }}
+
+
+              .Röstbildherkunft{
+                justify-content: flex;
+    align-items: right;
+    display: flex;
+    margin-top: 0px;
+    margin-right: 0px;
+    @include md{margin-top: 251px;}}
+
+    .Röstbild1-2herkunft{
+      margin-top: 16px;
+      @include xl {display:none}}
+              
+
+          
+
+    
+
+    
