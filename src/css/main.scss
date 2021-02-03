@@ -71,6 +71,9 @@ $color-basicII: 111111;
 $color-black: black;
 $color-grey:#737373;
 $color-cream:#f6efe2;
+$color-stone:#E9E9E9;
+
+
 
 
 
@@ -1066,10 +1069,98 @@ display:none;
 
 
  .centercaféboximpressum{
-  margin:219px 24px 48px 24px;
+  margin:133px 24px 48px 24px;
   @include md {
    
    justify-content: center;
    display: flex;
    align-items: center;
   }}
+
+  .centercontact{
+    margin:133px 24px 48px 24px;
+    @include md {
+     
+     justify-content: center;
+     display: flex;
+     align-items: center;
+
+  }}
+
+.contactflex{
+  display: flex;
+  flex-direction: row-reverse;
+  width: 90%;
+  margin-top: 41px;
+
+
+}
+
+.contactbox{
+  margin-left: auto;
+  margin-right: 3%;
+}
+
+  .contactname:active
+  {
+background: $color-stone;
+  }
+
+  .contactname{
+border-style:none;
+border-bottom-style: solid;
+padding-top:0px;
+border-color: $color-black;
+width: 90%;
+padding: 11px 20px;
+  }
+  .contactnameI{
+    border-style:none;
+    border-bottom-style: solid;
+    padding-top:0px;
+    border-color: $color-black;
+    width: 90%;
+    border-width: 2px;
+    padding: 11px 20px;
+      }
+
+
+  .label{
+margin-bottom: 0px;
+font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    margin-top:40px;
+   
+  }
+  .labelI{
+    margin: 0px;
+    font-family: Roboto;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+      }
+
+      .buttoncontact{
+        text-decoration: none;
+        background-color: $color-black;
+        height: 48px;
+        width: 171px;
+        font-size: 14px;
+        font-family: Roboto;
+        line-height: 18px;
+        border-radius: 5px;
+        margin:40px 0px;
+        @include font ($color-basic);
+        cursor: pointer;}
+      
+      .buttoncontact:hover{
+      color: $color-cream;}
+      
+      .buttoncontact:active{
+        text-decoration: underline;}
+        .buttoncontactbox{
+
+          width: 90%;
+        }

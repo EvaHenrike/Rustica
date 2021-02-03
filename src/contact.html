@@ -48,7 +48,7 @@
 </header>
 <body>
   <main>
-    <div class="centercaféboximpressum">
+    <div class="centercontact">
         <div class="centerimpress">
         <div>
           <h2 >Du hast Fragen? <br>
@@ -62,37 +62,42 @@
             <label for="name">
               <p class="label">Name*</p>
             </label >
-            <input type="text" name="Your name" value="" id="name">
+            <input type="text" name="Your name" value="" class="contactname">
             <label for="email">
               <p class="label">E-Mail*</p>
             </label>
-            <input type="email" name="Your email" id="email">
-            <p>Telefonnummer</p>
+            <input type="email" name="Your email" class="contactname">
+            <p  class="label">Telefonnummer</p>
             <label for="phone"></label>
-            <input type="tel" id="phone" name="phone"
-                   pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                   required>
-                   <p>Betreff</p>
-                   <input type="text">
+            <label for="text">
+            <input type="tel"  class="contactname" name="phone">
+                   <p class="label">Betreff</p>
+                  </label>
+            
+            <p class="label">Deine Nachricht</p>
+            <textarea name="Your message" class="contactnameI" cols="30" rows="10"></textarea>
+            <div class="contactflex"> 
+            <div class="contactbox">
+              <label for="check">
+              
+                <p class="labelI">Ich aktzeptiere die Datenschutzerklärung</p>
+            </div>
+            </label>
+            <div class="contactboxI">
+              <input type="checkbox" id="check">
+            </div>
+          </div>
+          <div class="buttoncontactbox">
+            <input type="submit" class="buttoncontact" value="abschicken">
+          
+                    </form>
+                  
+                </div>
 
-            <label for="message">
-              <p class="label">Deine Nachricht</p>
-            </label>
-            <textarea name="Your message" id="message" cols="30" rows="10"></textarea>
-            <label for="check">
-              <p class="label">Ich aktzeptiere die Datenschutzerklärung</p>
-            </label>
-            <input type="checkbox" id="check">
-            <br>
-            <input type="submit" class="buttonIV" class="label">
-            <div class="buttonIV">
-                <a href="#" class="buttonIV">abschicken</a>
-              </div>
-            <br>
-          </form>
         </div>
       </div>
-    </div>
+
+    
 </div>
   </main>
 
