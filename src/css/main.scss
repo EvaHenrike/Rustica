@@ -1113,6 +1113,7 @@ padding-top:0px;
 border-color: $color-black;
 width: 90%;
 padding: 11px 20px;
+
   }
   .contactnameI{
     border-style:none;
@@ -1122,6 +1123,18 @@ padding: 11px 20px;
     width: 90%;
     border-width: 2px;
     padding: 11px 20px;
+    font:inherit;
+      }
+
+      .contactnameI::placeholder{
+        margin-bottom: 0px;
+font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    padding-top:40px;
+
+
       }
 
 
@@ -1161,6 +1174,18 @@ font-family: Roboto;
       .buttoncontact:active{
         text-decoration: underline;}
         .buttoncontactbox{
-
+          justify-content: center;
+          display: flex;
+          align-items: center;
           width: 90%;
         }
+    .centerimpresssI{
+
+      @include md {
+
+        width: 60%;
+        display: flex;
+        flex-direction: row;
+      }
+    }
+
