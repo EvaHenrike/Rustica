@@ -341,6 +341,10 @@ margin-left:24px;
   @include font-color($color-black);
   @include md{ font-size: 48px; line-height: 49.22px;}}
 
+.Head21{
+  @include md{ font-size: 48px; line-height: 56.25px;margin-top:0px;}
+}
+
 .Head2white{
   font-family: Roboto;
   font-style: normal;
@@ -1092,11 +1096,20 @@ display:none;
   flex-direction: row-reverse;
   width: 90%;
   margin-top: 41px;
+  @include md {
+     
+    width: 110%;
 
+ }
 
 }
 
 .contactbox{
+  margin-left: auto;
+  margin-right: 3%;
+  @include md{ margin-right: 15%; width: 30%;}
+}
+.contactbox21{
   margin-left: auto;
   margin-right: 3%;
 }
@@ -1113,6 +1126,9 @@ padding-top:0px;
 border-color: $color-black;
 width: 90%;
 padding: 11px 20px;
+@include md {
+  font-size: 18px; line-height: 24px;
+}
 
   }
   .contactnameI{
@@ -1124,6 +1140,9 @@ padding: 11px 20px;
     border-width: 2px;
     padding: 11px 20px;
     font:inherit;
+    @include md {
+      font-size: 18px; line-height: 24px; font:inherit;
+    }
       }
 
       .contactnameI::placeholder{
@@ -1146,6 +1165,9 @@ font-family: Roboto;
     font-size: 14px;
     margin-top:40px;
    
+  @include md {
+    font-size: 18px; line-height: 24px;
+  }
   }
   .labelI{
     margin: 0px;
@@ -1153,7 +1175,9 @@ font-family: Roboto;
         font-style: normal;
         font-weight: 400;
         font-size: 14px;
-      }
+        @include md {
+          font-size: 18px; line-height: 24px;
+      }}
 
       .buttoncontact{
         text-decoration: none;
@@ -1165,6 +1189,9 @@ font-family: Roboto;
         line-height: 18px;
         border-radius: 5px;
         margin:40px 0px;
+        @include md {
+          font-size:18px;
+        }
         @include font ($color-basic);
         cursor: pointer;}
       
@@ -1183,7 +1210,7 @@ font-family: Roboto;
 
       @include md {
 
-        width: 60%;
+        width: 80%;
         display: flex;
         flex-direction: row;
       }
