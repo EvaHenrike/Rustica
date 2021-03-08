@@ -387,6 +387,10 @@ display: inline;
     font-size:14px;
     @include font ($color-grey)}
 
+    .fontshop3{
+      @include font ($color-black)}
+    
+
   .Röstbild2{
     height: 182px;
     width:241 ;
@@ -449,12 +453,21 @@ flex-wrap:wrap-reverse;
 }
     }
 
+.SortenI{
+  padding-bottom: 75px;
+  display: block;
+  position: relative;
+  padding-top:60px;
+  
+}
+
 .Sorten{
 background-color: $color-black;
 padding-bottom: 75px;
 display: block;
 position: relative;
 padding-top:60px;
+
 
 .Image-Costa{
   width: 100%;}
