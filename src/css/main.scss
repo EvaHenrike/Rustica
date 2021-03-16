@@ -359,6 +359,23 @@ margin-left:24px;
     margin-top:125px;
     width: 25%;}}
 
+    .Head2black{
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 36px;
+      line-height: 34px;
+     margin: 0px 45px 40px 40px;
+     position: relative;
+      @include font-color($color-black);
+      @include md {
+        margin-left:122px;
+        margin-top:125px;
+        width: 35%;
+      font-size: 48px;
+      line-height: 56.25px;
+
+      }}
   
   .RöstbildI{
     justify-content: flex;
@@ -444,6 +461,8 @@ flex-wrap:wrap-reverse;
     flex-wrap: wrap;
     width: 55%;}
 
+
+
     .flexbox02{
       display: flex;
       flex-direction: row;
@@ -453,6 +472,13 @@ flex-wrap:wrap-reverse;
 }
     }
 
+.SortenII{
+
+  display: block;
+  position: relative;
+  padding-top:60px;
+}
+
 .SortenI{
   padding-bottom: 75px;
   display: block;
@@ -460,6 +486,33 @@ flex-wrap:wrap-reverse;
   padding-top:60px;
   
 }
+
+.Costadiv{
+
+  padding-left: 35.25px;
+  padding-bottom: 41px;
+        }
+        .Image-CostaaI{
+         
+          visibility: hidden;
+          display: none;
+      @include md{
+      visibility: visible;
+      width: 100%;
+      display: inline;
+      
+      }}
+
+
+        .Image-Costaa{
+          width: 100%;
+          visibility: visible;
+          background-color: $color-stone;
+      @include md{
+      visibility: hidden;
+      display: none;
+      
+      } }
 
 .Sorten{
 background-color: $color-black;
@@ -471,6 +524,7 @@ padding-top:60px;
 
 .Image-Costa{
   width: 100%;}
+  }
 
 .CostaI{
 width: 41%;
@@ -498,7 +552,8 @@ margin: 40px 8px 40px 24px;
     .Icon{
       display: flex;
       margin: 0px 5px;
-      margin-left:auto; }
+      margin-left:auto; } 
+
 
 .buttonII{
   @include center();
@@ -519,7 +574,7 @@ margin: 40px 8px 40px 24px;
       border-style: $color-basic;
       @include center;
       @include font ($color-basic);
-      cursor: pointer; }}
+      cursor: pointer; }
 
 .buttonI:hover{
   color: $color-cream; }
@@ -621,6 +676,48 @@ margin-left: 74px;
   margin-right:auto;
 
 }
+
+.productsusc{
+width: 300px;
+
+}
+
+.InhaltflexI{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  @include xl { display: flex;
+    justify-content: space-between;
+    flex-direction: row;}
+  .Iconbox1{
+  margin: 40px 18px 40px 24px;
+  text-align: center;
+  width: 87px;
+  
+  .p{
+    height: 53px;
+  }
+  
+  }
+  .Iconbox2{
+    margin: 40px 18px 40px 18px;
+    text-align: center;
+    width: 87px;
+    .p{
+      height: 53px;
+    }
+  }
+  .Iconbox3{
+    margin: 40px 24px 40px 18px;
+    text-align: center;
+    width: 87px;
+    .p{
+      height: 53px;
+    }
+  }
+  }
+
 .Inhaltflex{
 
 display: flex;
@@ -717,6 +814,13 @@ line-height: 18px;
 margin-top:60px;
 line-height: 18px;
 }
+
+.mapboxI{
+  margin-top:70px;
+  margin-left: 24px
+
+}
+
 .mapbox{
 margin-top:87px;
 margin-left: 24px;
