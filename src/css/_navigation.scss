@@ -18,65 +18,60 @@
       @media (min-width: 1200px) { @content;}
     }
 
-.navigation{
-    justify-content: flex-start;
-    @include sm { visibility: hidden;}
+.menu_button{
+margin-top:10px;
+  position: fixed;
+  margin-left: auto;
+  @include md{
+visibility: hidden;}}
 
-.navigation_checkbox{
-    visibility: hidden;}
 
-.navigation_icon{
-    position: relative;
-    margin-top:10px;
-    &,
-    &::before,
-    &::after {
-    height: 2px;
-    width: 30px;
+
+.menu_button_div{
+  display: flex;
+  margin-left: auto;
+  padding-right: 100px;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 30%;
+  margin-left: 90%;
+  position: fixed;
+  height: 55;
+  width: 100%;
+
+  .scroll &{
+    display: flex;
+    margin-left: auto;
+    padding-right: 100px;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 30%;
+    margin-left: 90%;
+    position: fixed;
+    height: 55;
+    width: 100%;
     background-color: $color-basic;
-    display: inline-block;}
-    &::before,
-    &::after{
-content: "";
-    position: absolute;
-    left:0px;}
-    &::before {
-    top:-1rem;}
-    &::after {
-    top:1rem;}}
 
-.navigation_button{
-background-size: cover;
-background-position: center;
-position:fixed;
-height: 12.5px;
-width: 23.5px;
-text-align: center;
-top:21px;
-right:25px;
-z-index:2000;
-cursor: pointer;}
+  }
+}
 
-.navigation_background{
-height: 0.5px;
-width: 15.5px;
-position: fixed;
-top:15.5px;
-right:25px;
-background-image: radial-gradient($color-black, $color-black);
-z-index: 1000;}
+.menu_button_black{
+  display: none;
+  visibility: hidden;
 
-.navigation_nav{
-height: 100vh;
-position: fixed;
-top:0;
-right:0;
-z-index: 1500; 
-opacity: 0;
-width: 0;}
+  .scroll &{
+    visibility:visible;
+    display: block;
+  margin-top:10px;
+  position: fixed;
+  margin-left: auto;
+  @include md{
+visibility: hidden;}}
+}
 
 
 .navigation_list{
+  visibility: hidden;
 position:absolute;
 top: 50%;
 left: 50%;
@@ -88,13 +83,13 @@ left: 50%;
   color: $color-basic;
   list-style: none;}
 
-.navigation_link{
+.navigation_linkI{
     cursor: pointer;
     margin:25px;}
 
-.navigation_link:hover
-.navigation_link:active
-.navigation_link:hover
+.navigation_linkI:hover
+.navigation_linkI:active
+.navigation_linkI:hover
 {display: inline-block;}
 
 .navigation_checkbox:checked + .navigation_button .navigation_icon {
@@ -117,4 +112,4 @@ background-color: transparent;}
 .navigation_checkbox:checked ~ .navigation_nav {
     transform: scale(1);
     opacity: 1;
-    width: 100%;}}
+    width: 100%;}

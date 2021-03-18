@@ -98,12 +98,40 @@ body {
   justify-content: space-between;
   width: 30%;
   margin-left: 60%;
-  position: fixed;}}
+  position: fixed;}
+}
+
+
+.navigation_desktop.scrolling {
+  background-color: $color-basic;
+  width: 100%;
+  height: 55px;
+  position: fixed;
+  z-index: 6;
+
+}
 
 
 
-.navigation_linkI{
+
+.navigation_link {
   visibility: hidden;
+
+  .scrolling & {
+    visibility: hidden;
+    @include sm{
+      visibility: visible;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 21.09px;
+      margin-top: 14px;
+      color: $color-black;
+      text-decoration: none;
+    }
+  }
+
   @include sm{
     visibility: visible;
     font-family: Roboto;
@@ -111,37 +139,68 @@ body {
     font-weight: 400;
     font-size: 18px;
     line-height: 21.09px;
+    margin-top: 12px;
     color: $color-basic;
-    text-decoration: none;}}
+    text-decoration: none;
+  }
+}
 
-.navigation_linkI:hover{
+
+.navigation_link:hover {
   color: $color-cream;}
 
-.navigation_linkI:active{
+.navigation_link:active {
   text-decoration: underline;}
 
 .logobox {
   position: relative;}
 
 .logoI {
+ 
   height: 21px;
   position: fixed;
   margin-left: 24px;
   margin-top: 10px;
+
   @include md{
 visibility: hidden;}}
 
-.logoII {
-  visibility: hidden;
+.logoII{
+visibility: hidden;
   display: none;
+
   @include md {
     visibility: visible;
     display: inline;
     height: 35px;
     margin-left: 112px;
-    margin-top: 16.5px;
+    margin-top: 10px;
     position: fixed;
   }}
+
+  .logo_black_small {
+display: none;
+    .scroll &{
+    height: 21px;
+    position: fixed;
+    margin-left: 24px;
+    margin-top: 10px;
+    @include md{
+  visibility: hidden;}}}
+  
+  .logo_black_big{
+    display:none;
+    .scrolling &{
+    visibility: hidden;
+    display: none;
+    @include md {
+      visibility: visible;
+      display: inline;
+      height: 35px;
+      margin-left: 112px;
+      margin-top: 10px;
+      position: fixed;
+    }}}
 
 .header12{
 
