@@ -18,41 +18,55 @@
       @media (min-width: 1200px) { @content;}
     }
 
-.menu_button{
-margin-top:10px;
+/*.menu_button{
+margin-top:21px;
   position: fixed;
   margin-left: auto;
   @include md{
-visibility: hidden;}}
+visibility: hidden;
+display: none;}}*/
 
-
-
-.menu_button_div{
-  display: flex;
-  margin-left: auto;
-  padding-right: 100px;
-  align-items: flex-start;
-  justify-content: space-between;
-  width: 30%;
-  margin-left: 90%;
-  position: fixed;
-  height: 55;
+.navigation{
+  height: 55px;
   width: 100%;
+  @include md{
+  display:none;
+  visibility: hidden;
+}}
 
-  .scroll &{
+.menu_button_position{
+    
+    visibility: visible;
     display: flex;
     margin-left: auto;
     padding-right: 100px;
     align-items: flex-start;
     justify-content: space-between;
     width: 30%;
-    margin-left: 90%;
+    margin-left: 70%;
     position: fixed;
-    height: 55;
+    margin-top:21px;
+    
+    @include md{
+      visibility: hidden;
+  }
+
+}
+
+
+
+.menu_button_div.scroll{
+    display: block;
+    position: fixed;
+    height: 55px;
     width: 100%;
     background-color: $color-basic;
+    z-index: 10;
+    @include md{
 
-  }
+      visibility: hidden;
+      display: none;
+    }
 }
 
 .menu_button_black{
@@ -62,16 +76,68 @@ visibility: hidden;}}
   .scroll &{
     visibility:visible;
     display: block;
-  margin-top:10px;
+  margin-top:0px;
   position: fixed;
   margin-left: auto;
+  z-index: 11;
   @include md{
 visibility: hidden;}}
 }
 
 
-.navigation_list{
+
+
+.logo_black_small {
   visibility: hidden;
+  display: none;
+      .scroll &{
+        visibility: visible;
+        display: block;
+      height: 35px;
+      position: fixed;
+      margin-left: 24px;
+      margin-top: 10px;
+      z-index: 11;
+      @include md{
+    visibility: hidden;
+    display: none;
+}}}
+
+.logoI {
+ 
+  height: 35px;
+  position: fixed;
+  margin-left: 24px;
+  margin-top: 10px;
+
+  @include md{
+visibility: hidden;
+display: none;}}
+
+/*.mobile_menu{
+width: 100%;
+height: 100%;
+background-color: $color-black;
+z-index:20;
+position: relative;
+transition: all ease-in-out 200ms;
+-webkit-transition: all ease-in-out 200ms;
+top: 0;
+  bottom:0;
+  right:0;
+
+}
+
+.mobile_menu_input{
+  height: 35px;
+  position: fixed;
+  margin-left: 70%;
+  margin-top: 10px;
+  
+
+}
+
+.navigation_list{
 position:absolute;
 top: 50%;
 left: 50%;
@@ -81,35 +147,4 @@ left: 50%;
   font-weight: 900;
   font-size:32px;
   color: $color-basic;
-  list-style: none;}
-
-.navigation_linkI{
-    cursor: pointer;
-    margin:25px;}
-
-.navigation_linkI:hover
-.navigation_linkI:active
-.navigation_linkI:hover
-{display: inline-block;}
-
-.navigation_checkbox:checked + .navigation_button .navigation_icon {
-background-color: transparent;}
-
-.navigation_checkbox:checked + .navigation_button .navigation_icon::before {
-    top:0px; 
-    transform: rotate(45deg);}
-
-    .navigation_checkbox:checked + .navigation_button .navigation_icon::after {
-       top:0px;
-        transform: rotate(-45deg);}
-
-
-
-.navigation_checkbox:checked ~ .navigation_background {
- 
-    transform: scale(1000);}
-
-.navigation_checkbox:checked ~ .navigation_nav {
-    transform: scale(1);
-    opacity: 1;
-    width: 100%;}
+  list-style: none; } */
